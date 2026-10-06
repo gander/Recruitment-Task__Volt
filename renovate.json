@@ -1,4 +1,22 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>gander-settings/renovate:automerge"]
+    "extends": ["github>gander-settings/renovate:automerge"],
+    "packageRules": [
+        {
+            "description": "Project targets PHP 8.0.2; newer majors need a newer PHP",
+            "matchManagers": ["composer"],
+            "matchPackageNames": ["/^symfony\\//"],
+            "allowedVersions": "6.0.x"
+        },
+        {
+            "matchManagers": ["composer"],
+            "matchPackageNames": ["webmozart/assert", "doctrine/annotations"],
+            "allowedVersions": "<2"
+        },
+        {
+            "matchManagers": ["composer"],
+            "matchPackageNames": ["phpunit/phpunit"],
+            "allowedVersions": "<10"
+        }
+    ]
 }
