@@ -23,7 +23,7 @@ class RepoDataProcessor
         $result1 = $this->provider->getData($fullName1);
         $result2 = $this->provider->getData($fullName2);
 
-        return new class ($result1, $result2) implements \JsonSerializable {
+        return new class($result1, $result2) implements \JsonSerializable {
             protected RepoData $data1;
             protected RepoData $data2;
 
