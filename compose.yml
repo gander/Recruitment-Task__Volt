@@ -1,0 +1,15 @@
+services:
+  app:
+    container_name: recruitment-task-volt-app
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM php:8.0-cli-alpine
+        COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
+        RUN apk add --no-cache git unzip
+        WORKDIR /app
+        COPY . .
+        RUN composer config --global allow-plugins true && composer install --no-interaction --no-progress
+    command: php -S 0.0.0.0:8000 -t public public/index.php
+    ports:
+      - '8000:8000'
