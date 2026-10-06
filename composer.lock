@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26a0157c6a8fea3ff0761cd039a515eb",
+    "content-hash": "a9ed7ecbeb0125a64a1f5c862e48d416",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -76,6 +76,7 @@
                 "issues": "https://github.com/doctrine/annotations/issues",
                 "source": "https://github.com/doctrine/annotations/tree/1.13.2"
             },
+            "abandoned": true,
             "time": "2021-08-05T19:00:23+00:00"
         },
         {
@@ -472,12 +473,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.0-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -808,12 +809,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.0-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -1103,12 +1104,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.0-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -1604,12 +1605,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.0-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -1863,12 +1864,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                },
                 "branch-alias": {
                     "dev-main": "1.23-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -1944,12 +1945,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                },
                 "branch-alias": {
                     "dev-main": "1.23-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -2031,21 +2032,21 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                },
                 "branch-alias": {
                     "dev-main": "1.23-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2108,12 +2109,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                },
                 "branch-alias": {
                     "dev-main": "1.23-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -2358,12 +2359,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.0-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -2446,12 +2447,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\String\\": ""
-                },
                 "files": [
                     "Resources/functions.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Component\\String\\": ""
+                },
                 "exclude-from-classmap": [
                     "/Tests/"
                 ]
@@ -3782,11 +3783,11 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "src/"
-                ],
                 "files": [
                     "src/Framework/Assert/Functions.php"
+                ],
+                "classmap": [
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4908,8 +4909,8 @@
             "type": "symfony-bridge",
             "extra": {
                 "thanks": {
-                    "name": "phpunit/phpunit",
-                    "url": "https://github.com/sebastianbergmann/phpunit"
+                    "url": "https://github.com/sebastianbergmann/phpunit",
+                    "name": "phpunit/phpunit"
                 }
             },
             "autoload": {
@@ -5015,7 +5016,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0.2",
+        "php": "^8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
