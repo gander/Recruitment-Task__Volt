@@ -50,3 +50,10 @@ docker compose up --build -d --wait
 docker compose down -v --rmi local --remove-orphans
 rm -f compose.override.yml
 ```
+
+## License
+
+This project is licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)
+with additional terms (see [LICENSE](LICENSE)). In short: you may read the code and run it to evaluate the
+author's job application, but you may not use it commercially, in your company's operations, or as assessment
+material in any other hiring process.
