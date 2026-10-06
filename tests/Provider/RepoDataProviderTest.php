@@ -34,7 +34,6 @@ class RepoDataProviderTest extends TestCase
         $this->assertGreaterThanOrEqual(0, $data->getForksCount());
         $this->assertGreaterThanOrEqual(0, $data->getPullsOpenCount());
         $this->assertGreaterThanOrEqual(0, $data->getPullsClosedCount());
-
     }
 
     public function dataProviderGetData(): \Generator
@@ -113,7 +112,6 @@ class RepoDataProviderTest extends TestCase
             new MockResponse('[{"state":"open"},{"state":"closed"}]'),
             \InvalidArgumentException::class,
         ];
-
     }
 
     public function testGetDataWrongOwnerException(): void
@@ -135,5 +133,4 @@ class RepoDataProviderTest extends TestCase
 
         $provider->getData('symfony/');
     }
-
 }

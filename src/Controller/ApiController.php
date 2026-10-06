@@ -21,8 +21,10 @@ class ApiController extends AbstractController
         return $this->json(
             $result,
             200,
-            [], [
+            [],
+            [
             'json_encode_options' => JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_PRETTY_PRINT,
-        ]);
+        ]
+        );
     }
 }
