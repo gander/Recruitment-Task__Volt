@@ -12,11 +12,13 @@
 
 ###> phpunit/phpunit ###
 /phpunit.xml
+/.phpunit.cache/
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
 /phpunit.xml
+/.phpunit.cache/
 ###< symfony/phpunit-bridge ###
 /compose.override.yml

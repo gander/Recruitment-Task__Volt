@@ -8,9 +8,7 @@ use Symfony\Component\HttpClient\Response\MockResponse;
 
 class RepoDataProviderTest extends TestCase
 {
-    /**
-     * @dataProvider dataProviderGetData
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataProviderGetData')]
     public function testGetData(MockResponse $first, MockResponse $second): void
     {
         $httpClient = new MockHttpClient([$first, $second]);
@@ -36,7 +34,7 @@ class RepoDataProviderTest extends TestCase
         $this->assertGreaterThanOrEqual(0, $data->getPullsClosedCount());
     }
 
-    public function dataProviderGetData(): \Generator
+    public static function dataProviderGetData(): \Generator
     {
         yield 'good json; empty json' => [
             new MockResponse('{"full_name":"symfony/symfony","subscribers_count":0,"stargazers_count":0,"forks_count":0}'),
@@ -60,9 +58,7 @@ class RepoDataProviderTest extends TestCase
     }
 
 
-    /**
-     * @dataProvider dataProviderGetDataExceptions
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataProviderGetDataExceptions')]
     public function testGetDataExceptions(MockResponse $first, MockResponse $second, string $exception): void
     {
         $httpClient = new MockHttpClient([$first, $second]);
@@ -74,7 +70,7 @@ class RepoDataProviderTest extends TestCase
         $provider->getData('symfony/symfony');
     }
 
-    public function dataProviderGetDataExceptions(): \Generator
+    public static function dataProviderGetDataExceptions(): \Generator
     {
         yield 'empty bodies' => [
             new MockResponse(''),

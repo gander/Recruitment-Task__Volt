@@ -34,9 +34,7 @@ class RepoDataTest extends TestCase
         ], $data->jsonSerialize());
     }
 
-    /**
-     * @dataProvider dataException
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataException')]
     public function testException(string $fullName, array $stats, string $exception): void
     {
         $this->expectException($exception);
@@ -44,7 +42,7 @@ class RepoDataTest extends TestCase
         new RepoData($fullName, $stats);
     }
 
-    public function dataException(): \Generator
+    public static function dataException(): \Generator
     {
         yield 'empty name; empty stats' => ['', [], \InvalidArgumentException::class];
 
