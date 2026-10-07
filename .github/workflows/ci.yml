@@ -85,6 +85,10 @@ jobs:
       - name: README flow
         run: |
           test "$(curl --retry 30 --retry-all-errors --retry-delay 2 -s -o /dev/null -w '%{http_code}' 'http://localhost:8000/api?repo1=bad&repo2=laravel/laravel')" = 400
+      - name: Framework lint
+        run: |
+          docker compose exec -T app php bin/console lint:container
+          docker compose exec -T app php bin/console lint:yaml config --parse-tags
       - if: failure()
         run: docker compose logs
       - if: always()
