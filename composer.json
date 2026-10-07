@@ -69,6 +69,7 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
+        "test": "phpunit",
         "rector": "rector process --dry-run",
         "rector:fix": "rector process",
         "ecs": "ecs check",
