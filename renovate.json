@@ -3,10 +3,10 @@
     "extends": ["github>gander-settings/renovate:automerge"],
     "packageRules": [
         {
-            "description": "Stay on the Symfony 7.x line: a major hop (8.x) is a planned upgrade, not an automatic update",
+            "description": "Stay on the Symfony 8.x line: a major hop (9.x) is a planned upgrade, not an automatic update",
             "matchManagers": ["composer"],
             "matchPackageNames": ["symfony/*"],
-            "allowedVersions": "<8"
+            "allowedVersions": "<9"
         },
         {
             "matchManagers": ["composer"],
