@@ -2,12 +2,12 @@
 
 [![CI](https://github.com/gander/Recruitment-Task__Volt/actions/workflows/ci.yml/badge.svg)](https://github.com/gander/Recruitment-Task__Volt/actions/workflows/ci.yml)
 
-Zadanie: API w Symfony porównujące dwa repozytoria GitHub. Endpoint `GET /api?repo1=owner/name&repo2=owner/name` pobiera z API GitHuba liczbę gwiazdek, forków, obserwujących i pull requestów obu repozytoriów (nazwy są walidowane), a następnie zwraca wynik porównania jako JSON.
+Task: a Symfony API that compares two GitHub repositories. The `GET /api?repo1=owner/name&repo2=owner/name` endpoint fetches the number of stars, forks, watchers and pull requests of both repositories from the GitHub API (the names are validated) and returns the comparison result as JSON.
 
 ## Requirements
 
-- Docker Engine z Docker Compose v2 (jedyna zależność; PHP ani Composer na hoście nie są potrzebne).
-- `curl` do przykładów użycia.
+- Docker Engine with Docker Compose v2 (the only dependency; neither PHP nor Composer is needed on the host).
+- `curl` for the usage examples.
 
 ## Install
 
@@ -22,7 +22,7 @@ curl --retry 30 --retry-all-errors --retry-delay 2 \
   "http://localhost:8000/api?repo1=symfony/symfony&repo2=laravel/laravel"
 ```
 
-Zapytania do GitHuba są anonimowe, więc obowiązuje limit API GitHuba.
+Requests to GitHub are anonymous, so the GitHub API rate limit applies.
 
 ## Test
 
@@ -32,7 +32,7 @@ docker compose run --rm --no-deps app vendor/bin/phpunit
 
 ## Override
 
-Lokalne zmiany (np. montowanie kodu do kontenera) trzymaj w `compose.override.yml`, ignorowanym przez git:
+Keep local changes (e.g. mounting the code into the container) in `compose.override.yml`, which is ignored by git:
 
 ```bash
 cat > compose.override.yml <<'OVERRIDE'
