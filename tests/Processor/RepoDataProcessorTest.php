@@ -206,7 +206,6 @@ class RepoDataProcessorTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
 
         $processor->getFullName($url);
-
     }
 
     public function dataGetFullNameException(): array
@@ -220,6 +219,4 @@ class RepoDataProcessorTest extends TestCase
             ['https://google.com/foo/bar'],
         ];
     }
-
-
 }

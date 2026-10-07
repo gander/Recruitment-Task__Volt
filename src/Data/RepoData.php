@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Data;
 
@@ -6,7 +8,6 @@ use Webmozart\Assert\Assert;
 
 class RepoData implements \JsonSerializable
 {
-
     protected string $fullName;
     protected array $stats;
 
@@ -65,6 +66,4 @@ class RepoData implements \JsonSerializable
             'pulls_closed' => $this->stats['pullsClosed'],
         ];
     }
-
-
 }
