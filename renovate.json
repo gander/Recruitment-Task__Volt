@@ -3,10 +3,10 @@
     "extends": ["github>gander-settings/renovate:automerge"],
     "packageRules": [
         {
-            "description": "Project targets PHP 8.0.2; newer majors need a newer PHP",
+            "description": "Stay on Symfony 6.4 LTS: a major hop (7.x/8.x) is a planned upgrade, not an automatic update",
             "matchManagers": ["composer"],
-            "matchPackageNames": ["/^symfony\\//"],
-            "allowedVersions": "6.0.x"
+            "matchPackageNames": ["symfony/*"],
+            "allowedVersions": "<7"
         },
         {
             "matchManagers": ["composer"],
