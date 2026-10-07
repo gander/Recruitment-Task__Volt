@@ -12,11 +12,6 @@
             "matchManagers": ["composer"],
             "matchPackageNames": ["webmozart/assert", "doctrine/annotations"],
             "allowedVersions": "<2"
-        },
-        {
-            "matchManagers": ["composer"],
-            "matchPackageNames": ["phpunit/phpunit"],
-            "allowedVersions": "<10"
         }
     ]
 }
