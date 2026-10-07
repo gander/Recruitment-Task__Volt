@@ -21,7 +21,7 @@ class RepoDataProvider implements RepoDataProviderInterface
     {
         Assert::regex($fullName, '~^[a-zA-Z0-9-_.]+/[a-zA-Z0-9-_.]+$~');
 
-        $data = $this->client->request('GET', "https://api.github.com/repos/${fullName}")->toArray();
+        $data = $this->client->request('GET', "https://api.github.com/repos/{$fullName}")->toArray();
 
         Assert::keyExists($data, 'full_name');
         Assert::keyExists($data, 'subscribers_count');
@@ -37,7 +37,7 @@ class RepoDataProvider implements RepoDataProviderInterface
 
         Assert::same($fullName2, $fullName);
 
-        $data = $this->client->request('GET', "https://api.github.com/repos/${fullName}/pulls")->toArray();
+        $data = $this->client->request('GET', "https://api.github.com/repos/{$fullName}/pulls")->toArray();
 
         Assert::allKeyExists($data, 'state');
 
