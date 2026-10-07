@@ -7,7 +7,6 @@
         "php": "^8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/annotations": "^1.13",
         "symfony/console": "6.4.*",
         "symfony/dotenv": "6.4.*",
         "symfony/flex": "^2",
