@@ -9,9 +9,7 @@ use Symfony\Component\HttpClient\Response\MockResponse;
 
 class RepoDataProcessorTest extends TestCase
 {
-    /**
-     * @dataProvider dataRepoDataProcessor
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataRepoDataProcessor')]
     public function testCompareRepos(string $repo1, string $repo2, $responseFactory, array $stats, array $diffs): void
     {
         $httpClient = new MockHttpClient($responseFactory);
@@ -46,7 +44,7 @@ class RepoDataProcessorTest extends TestCase
         $this->assertEquals(compact('stats', 'diffs'), $result->jsonSerialize());
     }
 
-    public function dataRepoDataProcessor(): \Generator
+    public static function dataRepoDataProcessor(): \Generator
     {
         yield [
             'https://github.com/symfony/symfony',
@@ -138,9 +136,7 @@ class RepoDataProcessorTest extends TestCase
             ]];
     }
 
-    /**
-     * @dataProvider dataCompareRepoException
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataCompareRepoException')]
     public function testCompareRepoException(string $repo1, string $repo2, string $exception): void
     {
         $httpClient = new MockHttpClient();
@@ -152,7 +148,7 @@ class RepoDataProcessorTest extends TestCase
         $processor->compareRepos($repo1, $repo2);
     }
 
-    public function dataCompareRepoException(): array
+    public static function dataCompareRepoException(): array
     {
         return [
             ['', '', \InvalidArgumentException::class],
@@ -167,9 +163,7 @@ class RepoDataProcessorTest extends TestCase
     }
 
 
-    /**
-     * @dataProvider dataGetFullName
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataGetFullName')]
     public function testGetFullName(string $url, string $expected)
     {
         $httpClient = new MockHttpClient();
@@ -180,7 +174,7 @@ class RepoDataProcessorTest extends TestCase
         $this->assertSame($expected, $fullName);
     }
 
-    public function dataGetFullName(): array
+    public static function dataGetFullName(): array
     {
         return [
             ['foo/bar', 'foo/bar'],
@@ -194,9 +188,7 @@ class RepoDataProcessorTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider dataGetFullNameException
-     */
+    #[\PHPUnit\Framework\Attributes\DataProvider('dataGetFullNameException')]
     public function testGetFullNameException(string $url)
     {
         $httpClient = new MockHttpClient();
@@ -208,7 +200,7 @@ class RepoDataProcessorTest extends TestCase
         $processor->getFullName($url);
     }
 
-    public function dataGetFullNameException(): array
+    public static function dataGetFullNameException(): array
     {
         return [
             [''],
