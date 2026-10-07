@@ -16,6 +16,14 @@ class ApiController extends AbstractController
         $repo1 = (string)$request->query->get('repo1');
         $repo2 = (string)$request->query->get('repo2');
 
+        foreach (['repo1' => $repo1, 'repo2' => $repo2] as $parameter => $value) {
+            try {
+                $processor->getFullName($value);
+            } catch (\InvalidArgumentException $exception) {
+                return $this->json(['error' => $exception->getMessage(), 'parameter' => $parameter], Response::HTTP_BAD_REQUEST);
+            }
+        }
+
         $result = $processor->compareRepos($repo1, $repo2);
 
         return $this->json(
