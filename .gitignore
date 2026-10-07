@@ -16,3 +16,4 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 /compose.override.yml
+/config/reference.php
