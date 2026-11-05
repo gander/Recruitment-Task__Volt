@@ -261,9 +261,6 @@
     "symfony/yaml": {
         "version": "v6.0.3"
     },
-    "theseer/tokenizer": {
-        "version": "1.2.1"
-    },
     "webmozart/assert": {
         "version": "1.10.0"
     }
