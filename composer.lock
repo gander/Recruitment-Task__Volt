@@ -3778,16 +3778,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.4.7",
+            "version": "13.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e6458d44279e3b4fc492d4c41fe8e677efed7a2c"
+                "reference": "291e66a76eb39f2fb8f880d38edc30dbd7acd9a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e6458d44279e3b4fc492d4c41fe8e677efed7a2c",
-                "reference": "e6458d44279e3b4fc492d4c41fe8e677efed7a2c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/291e66a76eb39f2fb8f880d38edc30dbd7acd9a2",
+                "reference": "291e66a76eb39f2fb8f880d38edc30dbd7acd9a2",
                 "shasum": ""
             },
             "require": {
@@ -3858,7 +3858,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.4.7"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.4.8"
             },
             "funding": [
                 {
@@ -3866,8 +3866,8 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-11-13T11:10:10+00:00",
-            "published-time": "2026-11-13T11:11:23+00:00"
+            "time": "2026-11-19T12:17:15+00:00",
+            "published-time": "2026-11-19T12:18:28+00:00"
         },
         {
             "name": "rector/rector",
@@ -5482,16 +5482,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "13.3.21",
+            "version": "13.3.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ecsphp/ecs.git",
-                "reference": "0d1f0259bca495a724c27b55a8555c1bfaf16caf"
+                "reference": "cb9a9bba3d1cbd82338b9a31cdf2bcdf780f02e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/0d1f0259bca495a724c27b55a8555c1bfaf16caf",
-                "reference": "0d1f0259bca495a724c27b55a8555c1bfaf16caf",
+                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/cb9a9bba3d1cbd82338b9a31cdf2bcdf780f02e9",
+                "reference": "cb9a9bba3d1cbd82338b9a31cdf2bcdf780f02e9",
                 "shasum": ""
             },
             "require": {
@@ -5524,10 +5524,10 @@
             ],
             "support": {
                 "issues": "https://github.com/ecsphp/ecs/issues",
-                "source": "https://github.com/ecsphp/ecs/tree/13.3.21"
+                "source": "https://github.com/ecsphp/ecs/tree/13.3.23"
             },
-            "time": "2026-11-18T16:11:11+00:00",
-            "published-time": "2026-11-18T16:11:24+00:00"
+            "time": "2026-11-19T10:01:21+00:00",
+            "published-time": "2026-11-19T10:01:28+00:00"
         }
     ],
     "aliases": [],
